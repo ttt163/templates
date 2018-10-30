@@ -8,7 +8,6 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import createHistory from 'history/createBrowserHistory'
-import { ConnectedRouter } from 'react-router-redux'
 
 import 'babel-polyfill'
 import rootRoutes from './routers'
@@ -20,9 +19,7 @@ const history = createHistory()
 
 $('body').append('<div id="root"></div>')
 render(<Provider store={store}>
-    <ConnectedRouter history={history}>
-        <div>
-            {rootRoutes}
-        </div>
-    </ConnectedRouter>
+    <Router history = {history}>
+        {rootRoutes()}
+    </Router>
 </Provider>, document.getElementById('root'))

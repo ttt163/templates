@@ -88,14 +88,18 @@ module.exports = {
     plugins: [
         new StyleLintPlugin(),
         new UglifyJSPlugin({
-            compress: {
-                warnings: false,
-                drop_console: false
-            },
-            beautify: false,
-            comments: false,
-            extractComments: false,
-            sourceMap: false
+            uglifyOptions: {
+                compress: {
+                    warnings: false,
+                    drop_console: false
+                },
+                output: {
+                    // 最紧凑的输出
+                    beautify: false,
+                    // 删除所有的注释
+                    comments: false,
+                }
+            }
         }),
         new CleanWebpackPlugin([DIST_PATH], {
             root: '',
