@@ -1,9 +1,3 @@
-/**
- * Author：zhoushuanglong
- * Time：2017/7/27
- * Description：root route
- */
-
 import React from 'react'
 import { Route, IndexRoute } from 'react-router'
 

@@ -1,9 +1,3 @@
-/**
- * Author：zhoushuanglong
- * Time：2017/7/27
- * Description：outer jsx
- */
-
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'

@@ -1,9 +1,3 @@
-/**
- * Author：zhoushuanglong
- * Time：2017/7/27
- * Description：public function
- */
-
 import axios from 'axios'
 import { hashHistory } from 'react-router'
 import { message } from 'antd'

@@ -1,9 +1,3 @@
-/**
- * Author：zhoushuanglong
- * Time：2017/7/26
- * Description：enter
- */
-
 import React, { Component } from 'react'
 import './index.scss'
 import {setPageTitle} from '../../actions/public'
