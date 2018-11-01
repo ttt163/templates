@@ -1,9 +1,3 @@
-/**
- * Author：zhoushuanglong
- * Time：2017/7/27
- * Description：index actions
- */
-
 import { hashHistory } from 'react-router'
 import $ from 'jquery'
 import { axiosAjax } from '../public/index'
