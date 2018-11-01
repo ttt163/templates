@@ -1,0 +1,24 @@
+/**
+ * Author：tantingting
+ * Time：2018/11/1
+ * Description：Description
+ */
+@import "../../libs/scss/rem";
+
+@font-face {
+    font-family: 'iconfont';  /* project id 899224 */
+    src: url('//at.alicdn.com/t/font_899224_jg3ci1aufsi.eot');
+    src:
+        url('//at.alicdn.com/t/font_899224_jg3ci1aufsi.eot?#iefix') format('embedded-opentype'),
+        url('//at.alicdn.com/t/font_899224_jg3ci1aufsi.woff') format('woff'),
+        url('//at.alicdn.com/t/font_899224_jg3ci1aufsi.ttf') format('truetype'),
+        url('//at.alicdn.com/t/font_899224_jg3ci1aufsi.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: rem(24);
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
