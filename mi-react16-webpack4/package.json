@@ -1,0 +1,71 @@
+{
+  "name": "esim-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@mi/ga-func": "^1.0.3",
+    "@mi/telecom-fetch": "^1.0.2",
+    "body-parser": "^1.17.2",
+    "clean-webpack-plugin": "^0.1.16",
+    "express": "^4.15.3",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "formidable": "^1.1.1",
+    "glob": "^7.1.2",
+    "html-webpack-plugin": "^3.2.0",
+    "http-proxy-middleware": "^0.17.4",
+    "webpack": "^4.6.0",
+    "webpack-dev-middleware": "^3.1.2",
+    "webpack-dev-server": "^3.1.3",
+    "webpack-hot-middleware": "^2.22.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.4.0",
+    "@babel/polyfill": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/runtime-corejs2": "^7.4.2",
+    "autoprefixer": "^8.3.0",
+    "babel-loader": "^8.0.6",
+    "concurrently": "^3.5.0",
+    "cross-env": "^5.1.1",
+    "css-loader": "^0.28.4",
+    "file-loader": "^1.1.3",
+    "mini-css-extract-plugin": "^0.7.0",
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.11.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^2.1.4",
+    "postcss-plugin-px2rem": "^0.7.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.13.2",
+    "terser-webpack-plugin": "^1.3.0",
+    "url-loader": "^0.5.9",
+    "webpack-cli": "^3.3.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cross-env NODE_ENV=production webpack --progress --profile --colors",
+    "start-api-server": "nodemon -w server --ignore server/static-server.js ./server/api-server.js",
+    "start-dev-server": "nodemon -w server/static-server.js -w package.json -w webpack.config.common.js -w webpack.config.dev.js ./server/static-server.js",
+    "web": "concurrently \"npm run start-dev-server\" \"npm run start-api-server\" -k",
+    "proxy": "anyProxy -p 8001 -w 8002 -s --ignore-unauthorized-ssl -r ./server/proxy-server.js",
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run start-dev-server\" \"npm run start-api-server\" \"npm run proxy\" -k",
+    "https_dev": "cross-env PROTOCOL_ENV=https npm run dev"
+  },
+  "port": {
+    "http": 8080,
+    "https": 8443,
+    "api": 8081
+  },
+  "host": {
+    "preview": "",
+    "online": ""
+  },
+  "author": "chenxin5 yangkun5",
+  "license": "ISC"
+}

@@ -1,0 +1,18 @@
+/**
+ * Author：tantingting
+ * Time：2019/5/22
+ * Description：Description
+ */
+li {
+    a {
+        text-decoration: none;
+        color: #000;
+        font-size: 18px;
+        font-weight: bold;
+
+        &.active {
+            background: #00b0ff;
+            color: #fff;
+        }
+    }
+}
