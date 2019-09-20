@@ -1,0 +1,84 @@
+/**
+ * Author：tantingting
+ * Time：2019/7/2
+ * Description：Description
+ */
+/* style reset */
+table {
+    border-collapse: collapse;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+ol,
+dl,
+dt,
+dd,
+input,
+textarea,
+button {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        @extend a;
+    }
+}
+
+em,
+i {
+    font-style: normal;
+}
+
+/* clearfix */
+.clearfix:before,
+.clearfix:after {
+    content: "\20";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+// 移动端 a标签去掉蓝色背景
+a, a:hover, a:active, a:visited, a:link, a:focus {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    background: none;
+    text-decoration: none;
+}
+
+body {
+    background: #f5f5f5;
+}

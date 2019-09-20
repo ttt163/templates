@@ -31,7 +31,14 @@ const Enter = Loadable({
     loader: () => import(/* webpackChunkName: "enter" */ '../pages/enter'),
     loading: LoadingComp,
 });
-
+const Es7Redux = Loadable({
+  loader: () => import(/* webpackChunkName: "es7-redux" */ '../pages/es7-redux'),
+  loading: LoadingComp,
+});
+const HookRedux = Loadable({
+  loader: () => import(/* webpackChunkName: "hook-redux" */ '../pages/hook-redux'),
+  loading: LoadingComp,
+});
 /*const Home = (props) => (
     <Bundle load={require('bundle-loader?lazy!../pages/home')}>
         {(Home) => <Home {...props}/>}
@@ -58,6 +65,8 @@ export default class RootRouter extends React.Component{
                         <li><NavLink exact to='/' activeClassName="active">首页</NavLink></li>
                         <li><NavLink to='/app' activeClassName="active">app</NavLink></li>
                         <li><NavLink to='/home' activeClassName="active">home</NavLink></li>
+                      <li><NavLink to='/es7-redux' activeClassName="active">es7-redux</NavLink></li>
+                      <li><NavLink to='/hook-redux' activeClassName="active">hook-redux</NavLink></li>
                         <li><NavLink to='/topic' activeClassName="active">主题列表</NavLink></li>
                     </ul>
                     <hr/>
@@ -67,6 +76,8 @@ export default class RootRouter extends React.Component{
                             <Route exact path="/" component={Enter}/>
                             <Route  path="/app" component={ App} />
                             <Route path="/home" component={Home} />
+                            <Route path="/es7-redux" component={Es7Redux} />
+                            <Route path="/hook-redux" component={HookRedux} />
                             <Route component={NotMatch} />
                         </Switch>
                     </div>

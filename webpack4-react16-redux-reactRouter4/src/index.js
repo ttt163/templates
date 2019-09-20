@@ -5,8 +5,10 @@
  */
 import React from 'react';
 import { render } from 'react-dom';
+import {Provider} from 'react-redux'
 
 import Routers from './router/router'
+import store from './redux/store'
 
 /*import { applyMiddleware, createStore} from 'redux'
 import { Provider } from 'react-redux'
@@ -22,6 +24,8 @@ const middleware = applyMiddleware(promise(), thunk)
 const store = createStore(reducers, middleware)*/
 
 render(
-    <Routers />,
+  <Provider store={store}>
+    <Routers />
+  </Provider>,
     document.getElementById("app")
 )
