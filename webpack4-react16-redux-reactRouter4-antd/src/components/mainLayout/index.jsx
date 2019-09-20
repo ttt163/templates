@@ -7,7 +7,7 @@
 import React, {useState} from 'react'
 import { Layout, Menu, Icon } from 'antd';
 const { Header, Sider, Content } = Layout;
-import {pageRouter} from '../../router/config'
+import {pageRouters} from '../../router/config'
 import './index.scss'
 import { NavLink } from "react-router-dom"
 
@@ -25,7 +25,7 @@ export default function (props) {
         </div>
         <Menu theme="dark" mode="inline" defaultSelectedKeys={['0']}>
           {
-            pageRouter.map((item, index) => (
+            pageRouters.baseLayout.map((item, index) => (
               <Menu.Item key={index}>
                 <NavLink to={item.path}>
                   <Icon type={item.icon} />

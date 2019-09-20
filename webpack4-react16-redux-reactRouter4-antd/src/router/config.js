@@ -11,20 +11,23 @@ import asyncComponent from '../components/asyncComponent'
  */
 const UserAccount = asyncComponent(() => import(/* webpackChunkName: "userAccount" */ '../pages/userAccount'))
 const RefundOrder = asyncComponent(() => import(/* webpackChunkName: "refundOrder" */ '../pages/refundOrder'))
-
-export const pageRouter = [
-  {
-    key: 'userAccount',
-    path: '/userAccount',
-    label: '账户管理',
-    icon: 'user',
-    component: UserAccount
-  },
-  {
-    key: 'refundOrder',
-    path: '/refundOrder',
-    icon: 'solution',
-    label: '退款订单管理',
-    component: RefundOrder
-  }
-]
+export const pageRouters = {
+  blankLayout: [],
+  headerLayout: [],
+  baseLayout: [
+    {
+      key: 'userAccount',
+      path: '/userAccount',
+      label: '账户管理',
+      icon: 'user',
+      component: UserAccount
+    },
+    {
+      key: 'refundOrder',
+      path: '/refundOrder',
+      icon: 'solution',
+      label: '退款订单管理',
+      component: RefundOrder
+    }
+  ]
+}
