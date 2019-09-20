@@ -11,8 +11,17 @@ import asyncComponent from '../components/asyncComponent'
  */
 const UserAccount = asyncComponent(() => import(/* webpackChunkName: "userAccount" */ '../pages/userAccount'))
 const RefundOrder = asyncComponent(() => import(/* webpackChunkName: "refundOrder" */ '../pages/refundOrder'))
+const Login = asyncComponent(() => import(/* webpackChunkName: "login" */ '../pages/login'))
 export const pageRouters = {
-  blankLayout: [],
+  blankLayout: [
+    {
+      key: 'login',
+      path: '/login',
+      label: '登陆',
+      icon: 'user',
+      component: Login
+    }
+  ],
   headerLayout: [],
   baseLayout: [
     {

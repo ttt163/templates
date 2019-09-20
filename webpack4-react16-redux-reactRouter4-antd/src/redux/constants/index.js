@@ -5,4 +5,4 @@
  */
 
 // 登陆
-export const LOGIN = 'login'
+export const SET_LOGIN_DATA = 'SET_LOGIN_DATA'
